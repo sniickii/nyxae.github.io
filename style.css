@@ -448,5 +448,120 @@ a {
 
   .logo {
     font-size: 1.6rem;
+
+  /* mniejsze napisy + szerszy układ */
+:root {
+  --page-width: min(1380px, calc(100% - 64px));
+}
+
+html {
+  font-size: 15px;
+}
+
+.nav,
+.container,
+.footer {
+  width: var(--page-width);
+}
+
+.nav {
+  padding: 16px 24px;
+}
+
+.logo {
+  font-size: 1.75rem;
+}
+
+.nav-links {
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+}
+
+.hero {
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 56px;
+  min-height: 86vh;
+}
+
+.eyebrow {
+  padding: 12px 16px;
+  font-size: 0.78rem;
+}
+
+.hero h1 {
+  max-width: 980px;
+  font-size: clamp(3.15rem, 5.2vw, 4.85rem);
+  line-height: 0.92;
+}
+
+.hero-text {
+  max-width: 760px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.btn {
+  min-height: 52px;
+  padding: 0 24px;
+  font-size: 0.95rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+}
+
+.section-heading p,
+.tool-pill,
+.faq-card p,
+.project-card p,
+.contact-box p,
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.footer p,
+.footer a {
+  font-size: 0.95rem;
+}
+
+.faq-card h3,
+.project-card h3,
+.contact-box h2 {
+  font-size: 1.35rem;
+}
+
+.hero-card {
+  min-height: 500px;
+}
+
+.project-preview {
+  height: 200px;
+}
+
+@media (max-width: 1080px) {
+  :root {
+    --page-width: min(100% - 32px, 1380px);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 14px;
+  }
+
+  :root {
+    --page-width: min(100% - 20px, 1380px);
+  }
+
+  .nav {
+    padding: 14px 18px;
   }
 }
