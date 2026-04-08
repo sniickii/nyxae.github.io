@@ -1,167 +1,168 @@
-<h1>TEST DZIALA</h1>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>nyxae</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
-}
-
-body {
-  background: #071a1f;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* GRID BACKGROUND */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(#0f2a30 1px, transparent 1px),
-                    linear-gradient(90deg, #0f2a30 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.2;
-}
-
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-}
-
-nav h2 {
-  color: #2ef5c0;
-}
-
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #aaa;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #2ef5c0;
-  text-shadow: 0 0 10px #2ef5c0;
-}
-
-/* HERO */
-.hero {
-  padding: 120px 60px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-.hero h2 {
-  font-size: 60px;
-  color: #2ef5c0;
-  text-shadow: 0 0 20px #2ef5c0;
-}
-
-.hero p {
-  margin-top: 20px;
-  color: #bbb;
-}
-
-/* BUTTONS */
-.buttons {
-  margin-top: 30px;
-}
-
-button {
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: none;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.primary {
-  background: #2ef5c0;
-  color: black;
-  box-shadow: 0 0 15px #2ef5c0;
-}
-
-.primary:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #2ef5c0;
-}
-
-/* PROJECTS */
-.projects {
-  padding: 80px 60px;
-}
-
-.projects h2 {
-  margin-bottom: 30px;
-}
-
-.project-box {
-  background: #0d2a30;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.project-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #2ef5c0;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nyxae</title>
+  <meta name="description" content="Portfolio nyxae" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="page-bg"></div>
 
-<nav>
-  <h2>nyxae</h2>
-  <div>
-    <a href="#">Baza</a>
-    <a href="#projekty">Projekty</a>
-    <a href="#">Kontakt</a>
-  </div>
-</nav>
+  <header class="nav">
+    <a href="#hero" class="logo hover-glow">nyxae</a>
 
-<section class="hero">
-  <h1>GRAFIK, DEVELOPER, TECHNIK</h1>
-  <h2>ROBIĘ FAJNE RZECZY.</h2>
-  <p>OGARNIAM WIĘCEJ NIŻ MYŚLISZ.</p>
+    <nav class="nav-links">
+      <a href="#about" class="hover-glow">Baza</a>
+      <a href="#skills" class="hover-glow">Umiejętności</a>
+      <a href="#projects" class="hover-glow">Projekty</a>
+      <a href="#contact" class="hover-glow">Kontakt</a>
+    </nav>
 
-  <div class="buttons">
-    <button class="primary">Zobacz projekty</button>
-    <button>Kontakt</button>
-  </div>
-</section>
+    <a href="#contact" class="btn btn-primary hover-glow">Pogadajmy</a>
+  </header>
 
-<section class="projects" id="projekty">
-  <h2>🚀 Projekty</h2>
+  <main class="container">
+    <section id="hero" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow hover-glow">SYSTEM: ONLINE • PRZYJMUJĘ ZLECENIA</p>
 
-  <div class="project-box">🔥 Strona portfolio</div>
-  <div class="project-box">⚡ Plugin Minecraft</div>
-  <div class="project-box">💻 UI Design</div>
+        <h1>
+          GRAFIK, DEVELOPER, TECHNIK
+          <span>ROBIĘ RÓŻNE FAJNIE RZECZY.</span>
+        </h1>
 
-</section>
+        <p class="hero-text">
+          Ogarnam rzeczy, których połowa osób nie ogarnia. Projektuję, składam,
+          koduję i dowożę estetyczne rzeczy z mocnym klimatem.
+        </p>
 
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary hover-glow">Zobacz projekty</a>
+          <a href="#contact" class="btn btn-secondary hover-glow">Kontakt</a>
+        </div>
+      </div>
+
+      <div class="hero-card hover-panel">
+        <div class="hero-frame"></div>
+        <div class="hero-badge">nyxae // creative system</div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <h2>APLIKACJE</h2>
+      </div>
+
+      <div class="pill-grid">
+        <div class="tool-pill hover-glow">Photoshop</div>
+        <div class="tool-pill hover-glow">BlockBench</div>
+        <div class="tool-pill hover-glow">Photopea</div>
+        <div class="tool-pill hover-glow">Visual Studio Code</div>
+        <div class="tool-pill hover-glow">Paint.net</div>
+        <div class="tool-pill hover-glow">Mine-imator</div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <h2>PYTANIA</h2>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-card hover-panel">
+          <h3>Czas Tworzenia Grafik.</h3>
+          <p>Czas czekania zależy od ilości zadań i poziomu trudności zlecenia.</p>
+        </article>
+
+        <article class="faq-card hover-panel">
+          <h3>Czy Robię Grafiki Za Darmo?</h3>
+          <p>Za darmo nie robię grafik, ale mogę zaproponować opcję współpracy.</p>
+        </article>
+
+        <article class="faq-card hover-panel">
+          <h3>Pakiety Rzeczy Do Grafik.</h3>
+          <p>Różne pakiety narzędzi do tworzenia grafik, bannerów, logotypów i layoutów.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <h2>WYBRANE PROJEKTY</h2>
+        <p>Nowoczesne</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card hover-panel">
+          <div class="project-preview"></div>
+          <h3>Grafiki</h3>
+          <p>Bannery, loga, identyfikacja wizualna</p>
+        </article>
+
+        <article class="project-card hover-panel">
+          <div class="project-preview"></div>
+          <h3>Discord</h3>
+          <p>Serwery Discord, designer setup, branding</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="contact-box hover-panel">
+        <h2>Chcesz się z nami skontaktować?</h2>
+        <p>Wypełnij poniższy formularz, a odpowiem wkrótce.</p>
+
+        <form class="contact-form">
+          <label>
+            Twoje imię
+            <input type="text" placeholder="Twoje imię" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" placeholder="twoj@email.com" />
+          </label>
+
+          <label>
+            Wiadomość
+            <textarea rows="6" placeholder="Opisz swój projekt..."></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary hover-glow full">Wyślij wiadomość</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>nyxae</h3>
+      <p>Projektowanie grafik, bannerów, loga i stron.</p>
+    </div>
+
+    <div>
+      <h4>Nawigacja</h4>
+      <a href="#about">Baza</a>
+      <a href="#projects">Projekty</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+
+    <div>
+      <h4>Specjalizacja</h4>
+      <a href="#">Loga</a>
+      <a href="#">Bannery</a>
+      <a href="#">Grafiki</a>
+    </div>
+
+    <div>
+      <h4>Status</h4>
+      <p>Przyjmuję projekty</p>
+    </div>
+  </footer>
 </body>
 </html>
