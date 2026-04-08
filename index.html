@@ -1,59 +1,143 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>nyxae</title>
+<meta charset="UTF-8">
+<title>nyxae</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #071a1f;
-      color: white;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 50px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #aaa;
-      text-decoration: none;
-    }
+body {
+  background: #071a1f;
+  color: white;
+  overflow-x: hidden;
+}
 
-    .hero {
-      padding: 100px 50px;
-    }
+/* GRID BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#0f2a30 1px, transparent 1px),
+                    linear-gradient(90deg, #0f2a30 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.2;
+}
 
-    h1 {
-      font-size: 40px;
-    }
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
 
-    h2 {
-      color: #2ef5c0;
-      font-size: 45px;
-    }
+nav h2 {
+  color: #2ef5c0;
+}
 
-    button {
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: none;
-      margin-top: 20px;
-      background: #2ef5c0;
-    }
-  </style>
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
 
+nav a:hover {
+  color: #2ef5c0;
+  text-shadow: 0 0 10px #2ef5c0;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 60px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero h2 {
+  font-size: 60px;
+  color: #2ef5c0;
+  text-shadow: 0 0 20px #2ef5c0;
+}
+
+.hero p {
+  margin-top: 20px;
+  color: #bbb;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #2ef5c0;
+  color: black;
+  box-shadow: 0 0 15px #2ef5c0;
+}
+
+.primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #2ef5c0;
+}
+
+/* PROJECTS */
+.projects {
+  padding: 80px 60px;
+}
+
+.projects h2 {
+  margin-bottom: 30px;
+}
+
+.project-box {
+  background: #0d2a30;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #2ef5c0;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+</style>
 </head>
+
 <body>
 
 <nav>
   <h2>nyxae</h2>
   <div>
     <a href="#">Baza</a>
-    <a href="#">Projekty</a>
+    <a href="#projekty">Projekty</a>
     <a href="#">Kontakt</a>
   </div>
 </nav>
@@ -63,7 +147,19 @@
   <h2>ROBIĘ FAJNE RZECZY.</h2>
   <p>OGARNIAM WIĘCEJ NIŻ MYŚLISZ.</p>
 
-  <button>Zobacz projekty</button>
+  <div class="buttons">
+    <button class="primary">Zobacz projekty</button>
+    <button>Kontakt</button>
+  </div>
+</section>
+
+<section class="projects" id="projekty">
+  <h2>🚀 Projekty</h2>
+
+  <div class="project-box">🔥 Strona portfolio</div>
+  <div class="project-box">⚡ Plugin Minecraft</div>
+  <div class="project-box">💻 UI Design</div>
+
 </section>
 
 </body>
